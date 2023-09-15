@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">guarantee</string>
+    <string name="money_placeholder">%s원</string>
+</resources>

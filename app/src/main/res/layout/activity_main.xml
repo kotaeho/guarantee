@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#396AFD"
+        android:gravity="center"
+        app:contentInsetStart="0dp"
+        android:title="@string/app_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextColor="@android:color/white">
+
+        <ImageButton
+            android:padding="16dp"
+            android:id="@+id/leftButton"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:scaleType="centerCrop"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/menu"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="TODO" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="전세추천서비스"
+            android:textColor="@android:color/white"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TableLayout
+        android:gravity="center"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/tableLayout">
+
+        <TableRow>
+            <Button
+                android:gravity="center"
+                android:adjustViewBounds="true"
+                android:drawableTop="@drawable/appsrcmoneydrawable"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="보증금액조회"
+                android:id="@+id/guarantee_btn" />
+
+            <Button
+                android:drawableTop="@drawable/appsrcrecommenddrawable"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="보증상품추천"
+                android:id="@+id/guarantee_recommend"/>
+        </TableRow>
+
+        <TableRow>
+            <Button
+                android:drawableTop="@drawable/appsrcinterestdrawable"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="평균금리조회"
+                android:id="@+id/interest_rate"/>
+
+            <Button
+                android:drawableTop="@drawable/appsrcdescriptiondrawable"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="보증상세정보"
+                android:id="@+id/warranty_details"/>
+        </TableRow>
+    </TableLayout>
+</LinearLayout>
